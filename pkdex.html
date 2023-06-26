@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>List of {{ pet_type }}</h1>
+
+<ul>
+    {% for pkmn in pkmns %}
+    <li><a href="/pkdex/{{ pkmn.id }}">{{ pkmn.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
